@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>퍼지 이론</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<Link rel="icon" type="image/png" href="images/icon.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+      h1, p, summary {
+        text-align:left;
+      }
+      h3, h4 {
+          text-align:left;
+          text-shadow: 1px 1px 2px grey;
+        }
+      details {
+        text-align:left;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+      }
+      b {
+        font-size: 18px;
+        text-decoration: underline;
+      }
+    </style>
+	</head>
+	<body class="subpage">
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="logo">10장 인공지능 기술 I</a>
+				<nav id="nav">
+					<a href="index.html">Home</a>
+					<a href="fuzzy.html">퍼지이론</a>
+					<a href="evol.html">진화연산</a>
+					<a href="geneal.html">유전 알고리즘</a>
+					<a href="genepg.html">유전 프로그래밍</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
+		<!-- Three -->
+		<section id="three" class="wrapper">
+			<div class="inner">
+				<header class="align-center">
+					<h2 class="title">10장 - 인공지능 이론 I</h2>
+					<p></p>
+				</header>				
+			</div>
+			<div>
+				<details>
+			    <summary><h3>1. 퍼지 이론(fuzzy logic)</h3></summary>
+            <p><b>퍼지 논리(fuzzy logic)</b>는 모호한 대상을 다루는 논리이다.<br>
+            퍼지 논리는 퍼지 집합, 즉 모호한 정도를 조절할 수 있는 집합에 대한 이론이다.<br>
+            퍼지 전문가 시스템은 퍼지 규칙을 활용하여 만든 전문가 시스템이다.<br>
+            그리고 퍼지 규칙은 퍼지 집합을 기반으로 만든 규칙의 형태이다.<br>
+            </p>
+          <details>
+            <summary><h4>1-1. 퍼지논리</h4></summary>
+              <p>퍼지 논리는 <b>로트피 자데(Lotfi Zadeh)</b>가 이전의 퍼지 집합에 대한 연구를 바탕으로 발전적으로 연구한 분야이다.<br>
+              퍼지 논리를 고전 <b>이진 논리(binary logic)</b>처럼 소속을 분명히 하는 것이 아니라, <br>
+              어느 정도 속하는 지를 바탕으로 지식을 표현하는 일련의 수학 원칙으로 정의하였다.<br>
+              <br>
+              2차 논리인 불 논리와 달리 퍼지 논리는 여러 개의 값을 가지는 다치 논리이다. <br>
+              퍼지 논리는 소속도와 진리도를 다룬다. 이러한 소속도와 진리도는 여러 개의 값을 가질 수 있다.<br>
+              <br>
+              퍼지 논리는 완전한 거짓인 0과 완전한 참인 1 사이에 있는 연속된 논리값을 사용한다. <br>
+              퍼지 논리는 검정과 하양만 다루는 대신 다양한 회색을 사용한다고 볼 수 있다. 즉 어떤 대상이 참이면서도 거짓인 경우를 허용한다.<br>
+              이 그림에서 볼 수 있듯이 퍼지 논리는 불 논리에 논리값 범위를 더한 것이다.<br>
+              고전적인 이진 논리는 다치 퍼지 논리의 특수한 경우로 볼 수 있다.<br>
+              <br>
+              퍼지 논리는 완전한 거짓인 0과 완전한 참인 1 사이에 있는 연속된 논리값을 사용한다.<br>
+              퍼지 논리는 검정과 하양만 다루는 대신 다양한 회색을 사용한다고 볼 수 있다. <br>
+              즉 어떤 대상이 참이면서도 거짓인 경우를 허용한다.<br>
+              이 그림에서 볼 수 있듯이 퍼지 논리는 불 논리에 논리값 범위를 더한 것이다.<br>
+              고전적인 이진 논리는 다치 퍼지 논리의 특수한 경우로 볼 수 있다.<br>
+              <img src="media/bool-fuzzy.png">
+              <br>
+              <h4>- 불 논리</h4>
+              <b>불 논리(boolean logic)</b>에서는 참과 거짓이 확실하게 구분된다.<br>
+              하지만, 불 논리에는 사용하기에 불합리한 측면이 있다.<br>
+              (ex. 빠르기가 시속 100km 이상이면 과속, 아니면 과속이 아니라고 가정한다.<br>
+              만약, 내 차가 시속 101km로 달렸다면 과속이라고 할 수 있다.<br>
+              빠르기가 99km로 달린 친구의 차는 과속이 아니다.)<br>
+              <br>
+              <b>-> 퍼지 논리를 사용하면 불 논리의 불합리를 피할 수 있다.</b>
+            </p>
+          </details>
+          <details>
+            <summary><h4>1-2. 퍼지 집합</h4></summary>
+            <p><b>퍼지 집합 &harr; 고전적인 집합 = 크리스프 집합</b><br>
+              <br>
+              퍼지 집합은 경계가 모호한 집합이다. <br>
+              크리스프 집합과는 달리 원소가 퍼지 집합에 어느 정도 속한다는 것이 퍼지 집합의 기본 발상이다. <br>
+              명제는 참 또는 거짓이 아니라 어느 정도는 부분적으로 참이거나 부분적으로 거짓으로 나타낼 수 있다. <br>
+              여기서 사용되는 정도는 보통 [0,1] 범위의 실수값으로 나타난다. <br> 
+              <br>
+              크리스프 집합은 퍼지 집합과 대비된 <b>고전적인 집합</b>이다.<br>
+              X를 고전적인 크리스프 집합이고, x를 원소라 가정한다면, <br>
+              원소 x는 X에 속하거나, X에 속하지 않거나 둘 중 하나가 된다. <br>
+              고전적인 집합론에서는 이 집합의 경계에 명확하게 경계를 긋고, <br>
+              이 집합의 원소에는 1 대입하고, 원소가 아닌 것에는 0을 대입한다. <br>
+              그래서 크리스프 집합은 이분법 원리가 된다.<br>
+              <br>
+            </p>
+          </details>
+          <details>
+            <summary><h4>1-3. 언어 변수와 헤지</h4></summary>
+            <p>
+            퍼지 집합과 함께 퍼지 규칙을 만드는데 필요한 개념이다.<br>
+            퍼지 집합론의 뿌리에는 언어 변수라는 개념이 들어있다.<br>
+            언어 변수는 <b>퍼지 변수(fuzzy variable)</b>라고 할 수 있다. <br>
+            또한, 언어 변수는 언어값을 가질 수 있는 단어 변수이고, <br>
+            언어값은 언어 변수에 지정될 수 있는 형용사 또는 동사라고 할 수 있다.<br>
+            <br>
+            언어 변수는 ‘헤지’ 라고 하는 퍼지 집합 한정사의 개념을 수반한다.<br>
+            헤지는 퍼지 집합의 모양을 바꾸는 용어가 된다.<br>
+            따라서 헤지는 동사, 형용사 부사 등 전체 문장의 의미를 변경할 수 있다.<br>
+            또한, 범용 수식어, 확률, 한정사 등의 형태로도 사용된다.<br>
+            </p>
+          </details>
+          <details>
+            <summary><h4>1-4. 퍼지 규칙</h4></summary>
+            <p>
+              퍼지 규칙은 퍼지 집합을 이용한 규칙이다.
+            </p>
+          </details>
+          <details>
+            <summary><h4>1-5. 퍼지 전문가 시스템</h4></summary>
+            <p>
+            <b>퍼지 규칙을 활용하여 퍼지 전문가 시스템을 개발하는 절차</b><br>
+              <ol style="list-style-type: upper-roman;">
+                <li>문제를 명확히 하고 언어 변수를 정의한다.</li><br>
+                <li>퍼지 집합을 결정한다.</li><br>
+                <li>퍼지 규칙을 구성하고 도출한다.</li><br>
+                <li>퍼지 집합, 퍼지 규칙, 퍼지 추론을 수행하는 절차를 퍼지 시스템에 부호화해 넣는다.</li><br>
+                <li>시스템을 평가하고 조정한다.</li><br>
+              </ol>
+            </p>
+          </details>        
+    </details>
+</div>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; 2021 신라대학교 컴퓨터교육과 황선우, 김재현 All rights reserved
+						</div>
+					</div>
+				</div>
+			</footer>
+	</body>
+</html>

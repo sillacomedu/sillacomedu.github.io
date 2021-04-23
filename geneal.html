@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>유전 알고리즘</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="images/icon.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			h1, p, summary {
+				text-align:left;
+			}
+			h3, h4 {
+					text-align:left;
+					text-shadow: 1px 1px 2px grey;
+				}
+			details {
+				text-align:left;
+				margin-left: 10%;
+				margin-right: 10%;
+				margin-bottom: 5%;
+			}
+			b {
+				font-size: 18px;
+				text-decoration: underline;
+			}
+	 	</style>
+	</head>	
+	<body class="subpage">
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="logo">10장 인공지능 기술 I</a>
+				<nav id="nav">
+					<a href="index.html">Home</a>
+					<a href="fuzzy.html">퍼지이론</a>
+					<a href="evol.html">진화연산</a>
+					<a href="geneal.html">유전 알고리즘</a>
+					<a href="genepg.html">유전 프로그래밍</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
+		<!-- Three -->
+		<section id="three" class="wrapper">
+			<div class="inner">
+				<header class="align-center">
+					<h2 class="title">10장 - 인공지능 이론 I</h2>
+					<p></p>
+				</header>
+			</div>
+			<div>
+				<details>  
+      				<summary><h3>3. 유전 알고리즘</h3></summary>
+    					<p>유전 알고리즘은 자연선택과 유전학에서 영감을 얻은 교차와 변이 연산을 사용한다.<br>
+        				염색체는 <b>‘유전자(gene)’</b> 여러 개로 이루어지는데, 각 유전자는 0이나 1로 나타낸다.<br>
+			        	인코딩과 평가가 유전 알고리즘을 풀려는 문제와 연결된다. 인코딩은 염색체를 1과 0으로 된 문자열로 나타내는 것이다.<br>
+			        	평가함수는 풀려는 문제에 대한 염색체의 성능, 즉 적합도를 재는 데 사용한다.<br>
+			        	유전 알고리즘을 재생산할 때 평가함수에서 측정한 개별 염색체의 적합도 값을 사용한다.<br>
+			        	재생산이 일어나면 교차 연산자는 두 염색체 일부를 교환하고, 변이 연산자는 염색체에서 임의로 선택한 몇몇 자리에 있는 유전자의 값을 바꾼다.<br>
+			        	그 결과, 재생산이 여러 번 연속해서 일어난 후에는 적합도가 낮은 염색체는 소멸하고, 살아남은 염색체가 점차 해집단을 지배하게 된다.<br>
+			    		</p>
+			        <details>
+					    <summary><h4>기본적인 유전 알고리즘(이미지)</h4></summary>
+          					<img src="media/neuralalgorith.png">
+        			</details>
+  				</details>
+			</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<div class="flex">
+					<div class="copyright">
+						&copy; 2021 신라대학교 컴퓨터교육과 황선우, 김재현 All rights reserved
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
